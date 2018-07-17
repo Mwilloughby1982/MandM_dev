@@ -5,25 +5,25 @@
 #sudo cp -r /Volumes/Google\ Chrome/Google\ Chrome.app /Applications/
 
 # install zoom #
-#cd ~/Downloads
-#curl -L --remote-name https://zoom.us/client/latest/zoomusInstaller.pkg
-#sudo installer -pkg zoomusInstaller.pkg -target /
+cd ~/Downloads
+curl -L --remote-name https://zoom.us/client/latest/zoomusInstaller.pkg
+sudo installer -pkg zoomusInstaller.pkg -target /
 
 # install homebrew #
-#/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # install apps from homebrew #
-#brew install blueutil tmux watch tree jq
-##brew install minio/stable/mc
-#brew install cloudfoundry/tap/credhub-cli
-#brew install cloudfoundry/tap/bosh-cli
-#brew install cloudfoundry/tap/cf-cli
-#brew install homebrew/cask/powershell
-##brew cask install iterm2
+brew install blueutil tmux watch tree jq
+brew install minio/stable/mc
+brew install cloudfoundry/tap/credhub-cli
+brew install cloudfoundry/tap/bosh-cli
+brew install cloudfoundry/tap/cf-cli
+brew install homebrew/cask/powershell
+#brew cask install iterm2
 ##brew install zsh
-#brew install mas
-##mas install 715768417 803453959
-#gem install cf-uaac
+brew install mas
+mas install 715768417 803453959
+gem install cf-uaac
 
 # install fly-cli #
 cd ~/Downloads
