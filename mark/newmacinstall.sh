@@ -54,10 +54,17 @@ brew install cloudfoundry/tap/credhub-cli
 brew install cloudfoundry/tap/bosh-cli
 brew install cloudfoundry/tap/cf-cli
 brew install homebrew/cask/powershell
+<<<<<<< HEAD
 brew cask install iterm2
 brew install zsh
 brew install mas
 mas install 715768417 803453959 595191960 497799835 408981434 405399194
+=======
+#brew cask install iterm2
+##brew install zsh
+brew install mas
+mas install 715768417 803453959
+>>>>>>> d84fc4fe47e886c8ccd18b97afaf0e5349c47e59
 gem install cf-uaac
 
 # install fly-cli #
