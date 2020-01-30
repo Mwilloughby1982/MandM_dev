@@ -1,22 +1,22 @@
 #!/bin/bash
 # check to see if atom is installed #
-FILE=/Applications/Atom.app     
-if [ -d $FILE ]; then
-   echo "File $FILE exists."
-else
-   echo "File $FILE does not exist."
-   exit 1
-fi
+#FILE=/Applications/Atom.app
+#if [ -d $FILE ]; then
+#   echo "File $FILE exists."
+#else
+#   echo "File $FILE does not exist."
+#   exit 1
+#fi
 
 # Install Atom Packages #
-apm install split-diff
-apm install script
-apm install minimap
-apm install minimap-split-diff
-apm install minimap-highlight-selected
-apm install highlight-selected
-apm install atom-beautify
-apm install Sublime-Style-Column-Selection
+#apm install split-diff
+#apm install script
+#apm install minimap
+#apm install minimap-split-diff
+#apm install minimap-highlight-selected
+#apm install highlight-selected
+#apm install atom-beautify
+#apm install Sublime-Style-Column-Selection
 
 
 # create the .SSH symbolic link #
@@ -50,7 +50,7 @@ sudo installer -pkg zoomusInstaller.pkg -target /
 # install apps from homebrew #
 brew update
 brew upgrade
-brew install blueutil tmux watch tree jq
+brew install blueutil tmux watch tree jq telnet
 brew install minio/stable/mc
 brew install cloudfoundry/tap/credhub-cli
 brew install cloudfoundry/tap/bosh-cli
@@ -79,10 +79,10 @@ chmod +x fly_darwin_amd64
 mv fly_darwin_amd64 /usr/local/bin/fly
 
 # install vscode #
-cd ~/Downloads
-curl -o VSCode-darwin-stable.zip -L --remote-name https://go.microsoft.com/fwlink/?LinkID=620882
-cd /Applications
-unzip ~/Downloads/VSCode-darwin-stable.zip
+#cd ~/Downloads
+#curl -o VSCode-darwin-stable.zip -L --remote-name https://go.microsoft.com/fwlink/?LinkID=620882
+#cd /Applications
+#unzip ~/Downloads/VSCode-darwin-stable.zip
 
 # install oh-my-zsh (drops you into zsh and you must exit)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
