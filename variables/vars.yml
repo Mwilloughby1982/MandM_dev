@@ -1,0 +1,7 @@
+vault_sync_repo_uri: 
+internal_git_private_key: ((keys/git-ssh-key.private))
+automation_tools_image: markwilloughbycvs/automation
+east_vault_address: ((/east-regional/vault.uri))
+east_vault_token: ((/east-regional/vault.root_token))
+west_vault_address: ((/west-regional/vault.uri))
+west_vault_token: ((/west-regional/vault.root_token))

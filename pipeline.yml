@@ -1,0 +1,44 @@
+---
+resources:
+
+- name: vault-sync-repo
+  type: git
+  source:
+    uri: {{vault_sync_repo_uri}}
+    branch: master
+    private_key: {{internal_git_private_key}}
+- name: 15m
+  type: time
+  source: {interval: 15m}
+
+jobs:
+
+- name: Vault_Sync
+  plan:
+  - get: vault-sync-repo
+    trigger: false
+  - get: 15m
+    trigger: true
+  - task: Sync_Vault_to_East_Control_Plane
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source:
+          repository: {{automation_tools_image}}
+          tag: latest
+      run:
+        path: bash
+        args:
+          - -exc
+          - |
+            python3 vault-sync-repo/scripts/update.py
+      params:
+        WEST_VAULT_ADDR: {{west_vault_address}}
+        WEST_VAULT_TOKEN: {{west_vault_token}}
+        EAST_VAULT_ADDR: {{east_vault_address}}
+        EAST_VAULT_TOKEN: {{east_vault_token}}
+        VAULT_SKIP_VERIFY: 1
+
+      inputs:
+      - name: vault-sync-repo
