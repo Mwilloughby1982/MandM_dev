@@ -20,14 +20,14 @@
 
 
 # create the .SSH symbolic link #
-FILE=/Users/markwilloughby/Desktop/Keys     
-if [ -d $FILE ]; then
-   echo "File $FILE exists."
-   ln -s ~/Desktop/Keys/.ssh ~/.ssh
-   chmod 400 ~/.ssh/*.pem
-else
-   echo "File $FILE does not exist."
-fi
+#FILE=/Users/markwilloughby/Desktop/Keys     
+#if [ -d $FILE ]; then
+#   echo "File $FILE exists."
+#   ln -s ~/Desktop/Keys/.ssh ~/.ssh
+#   chmod 400 ~/.ssh/*.pem
+#else
+#   echo "File $FILE does not exist."
+#fi
 
 
 
@@ -68,7 +68,7 @@ brew install direnv
 brew install terraform
 brew install wget aws-cli
 
-mas install 715768417 803453959 595191960 497799835 408981434 405399194
+mas install 803453959 1020812363
 gem install cf-uaac
 
 # install fly-cli #
