@@ -1,38 +1,4 @@
 #!/bin/bash
-# check to see if atom is installed #
-#FILE=/Applications/Atom.app
-#if [ -d $FILE ]; then
-#   echo "File $FILE exists."
-#else
-#   echo "File $FILE does not exist."
-#   exit 1
-#fi
-
-# Install Atom Packages #
-#apm install split-diff
-#apm install script
-#apm install minimap
-#apm install minimap-split-diff
-#apm install minimap-highlight-selected
-#apm install highlight-selected
-#apm install atom-beautify
-#apm install Sublime-Style-Column-Selection
-
-
-# create the .SSH symbolic link #
-#FILE=/Users/markwilloughby/Desktop/Keys     
-#if [ -d $FILE ]; then
-#   echo "File $FILE exists."
-#   ln -s ~/Desktop/Keys/.ssh ~/.ssh
-#   chmod 400 ~/.ssh/*.pem
-#else
-#   echo "File $FILE does not exist."
-#fi
-
-
-
-
-
 # install chrome #
 cd ~/Downloads
 curl https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg -o googlechrome.dmg
@@ -68,6 +34,46 @@ brew install direnv
 brew install terraform
 brew install wget aws-cli
 
+brew install bbr
+brew install p-automator
+brew install cloudfoundry/tap/bbl
+brew install azure-cli
+brew upgrade kubernetes-cli
+brew install tftp
+brew install go
+brew tap pivotal/tap
+brew install gemfire
+brew install mvn
+brew install kubeadm
+brew install helm
+brew install argocd
+brew install kctrl
+brew install k9s
+brew install psql
+brew install nodejs
+brew install npm
+brew install mkdocs
+brew install psql
+brew install postgresql
+brew tap pivotal-cf/om https://github.com/pivotal-cf/om
+brew install om
+brew cleanup
+wget -O- https://carvel.dev/install.sh > install.sh
+sudo bash install.sh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 mas install 803453959 1020812363
 gem install cf-uaac
 
@@ -78,11 +84,7 @@ curl -L --remote-name $(curl -s https://api.github.com/repos/concourse/concourse
 chmod +x fly_darwin_amd64
 mv fly_darwin_amd64 /usr/local/bin/fly
 
-# install vscode #
-#cd ~/Downloads
-#curl -o VSCode-darwin-stable.zip -L --remote-name https://go.microsoft.com/fwlink/?LinkID=620882
-#cd /Applications
-#unzip ~/Downloads/VSCode-darwin-stable.zip
+
 
 # install oh-my-zsh (drops you into zsh and you must exit)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
